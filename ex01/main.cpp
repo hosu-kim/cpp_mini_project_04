@@ -2,7 +2,7 @@
 #include "Cat.hpp"
 #include "Brain.hpp"
 
-// TEST 1 from the doc
+// default test from the doc
 // int main()
 // {
 // 	const Animal* j = new Dog();
@@ -12,7 +12,7 @@
 // 	return 0;
 // }
 
-// TEST 2
+// my test
 int main() {
 	const int N = 4;
 	Animal* zoo[N];
