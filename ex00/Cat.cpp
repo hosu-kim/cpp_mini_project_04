@@ -1,20 +1,22 @@
 #include "Cat.hpp"
 
-Cat::Cat(): AAnimal() {
+//          vvvvvvvvv it could be skipped here but written for clarity
+Cat::Cat(): Animal() {
 	type = "Cat";
 	std::cout << "Cat default constructor called" << std::endl;
 }
 
-Cat::Cat(const Cat& other): AAnimal(other) {
+Cat::Cat(const Cat& other): Animal(other) {
 	std::cout << "Cat copy constructor called" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& other) {
 	std::cout << "Cat copy assignment operator called" << std::endl;
-	AAnimal::operator=(other);
+	Animal::operator=(other);
 	return *this;
 }
 
+// In destuctor, calling parent is dangerous (double free)
 Cat::~Cat() {
 	std::cout << "Cat destructor called" << std::endl;
 }

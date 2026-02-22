@@ -15,7 +15,7 @@
 // TEST 2
 int main() {
 	const int N = 4;
-	AAnimal* zoo[N];
+	Animal* zoo[N];
 
 	for (int i = 0; i < N; ++i) {
 		if (i < N/2)

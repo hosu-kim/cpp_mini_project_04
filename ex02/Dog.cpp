@@ -1,12 +1,12 @@
 #include "Dog.hpp"
 
-Dog::Dog(): AAnimal() {
+Dog::Dog(): Animal() {
 	brain = new Brain();
 	type = "Dog";
 	std::cout << "Dog default constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog& other): AAnimal(other) {
+Dog::Dog(const Dog& other): Animal(other) {
 	brain = new Brain(*other.brain);
 	std::cout << "Dog copy constructor called" << std::endl;
 }
@@ -16,7 +16,7 @@ Dog& Dog::operator=(const Dog& other) {
 	if (this != &other) {
 		delete brain;
 		// vvv 부모 클래스의 멤버 변수들도 복사하기 위해 호출
-		AAnimal::operator=(other);
+		Animal::operator=(other);
 		brain = new Brain(*other.brain);
 	}
 	return *this;

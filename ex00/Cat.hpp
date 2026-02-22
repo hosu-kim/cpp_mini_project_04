@@ -3,8 +3,11 @@
 
 #include "Animal.hpp"
 
-class Cat: public AAnimal {
+class Cat: public Animal {
 	public:
+	// In AAnimal,
+	//   virtual ~AAnimal();
+	//   virtual void makeSound() const;
 		Cat();
 		Cat(const Cat& other);
 		Cat& operator=(const Cat& other);
